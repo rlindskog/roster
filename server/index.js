@@ -23,7 +23,7 @@ const app = express()
 
 let renderer
 if (isProd) {
-  const bundle = require('../dist/vue-ssr-bundle.json'
+  const bundle = require('../dist/vue-ssr-bundle.json')
   const template = fs.readFileSync(resolve('../dist/index.html'), 'utf-8')
   renderer = createRenderer(bundle, template)
 } else {
@@ -50,9 +50,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(compression({ threshold: 0 }))
-app.use(favicon('./public/logo-48.png'))
 app.use('/dist', serve('../dist', true))
-app.use('/public', serve('../public', true))
 app.use('/manifest.json', serve('../manifest.json', true))
 app.use('/service-worker.js', serve('../dist/service-worker.js'))
 

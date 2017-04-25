@@ -3,7 +3,7 @@
   "description": "Baseball Line-up/Roster Creation",
   "author": "Ryan Lindskog",
   "scripts": {
-    "start": "cross-env NODE_ENV=development node ./server/index",
+    "start": "cross-env NODE_ENV=production node ./server/index",
     "build": "run-s build-*",
     "dev": "cross-env NODE_ENV=development nodemon ./server/index",
     "test": "mocha ./server/api/tests",

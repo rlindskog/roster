@@ -120,7 +120,6 @@ const store = new Vuex.Store({
 			state.token = token
 			state.user = user
 			state.isAuthenticated = true
-			store.state.route.push({ path: `/users/${user.username}` })
 		},
 		signOut(state) {
 			Cookies.remove('token')
